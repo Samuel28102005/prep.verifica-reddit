@@ -1,0 +1,22 @@
+<form >
+  <h3 >Add a Link</h3>
+  <div>
+    <label for="title">TITLE:</label>
+    <input name="title" #title> <!--Aggiunta una variabile di template-->
+  </div>
+  <div>
+    <label for="spam">SPAM:</label>
+    <input name="spam" #spam> <!--Aggiunta una variabile di template-->
+  </div>
+  <button (click)="addspam(title, spam)"> <!--Passiamo le variabili come parametro --> 
+  Submit spam
+  </button>
+</form>
+
+<ul>
+  <li *ngFor= "let name of articles">
+    <app-visualizza [name] = "name"></app-visualizza>
+  </li>
+
+</ul>
+
